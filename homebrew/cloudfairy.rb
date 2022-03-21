@@ -4,7 +4,7 @@ class Fairy < Formula
   sha256 :no_check
   license "MIT"
   version: "v0.0.2"
-  
+  name "fairy"
 
   on_macos do
     url "https://github.com/cloud-fairy/fairy-cli/releases/download/v0.0.2/fairy-darwin-amd64"
