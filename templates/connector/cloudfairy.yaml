@@ -1,0 +1,33 @@
+cloudfairy_module:
+  type: connector
+  builder_runtime: "terraform"
+  entry: "main.tf"
+
+  # small caps, underscore and dahses only. no specials characters or spaces
+
+  # Vendor namespace
+  vendor: "acme"
+
+  # Your connetor's interal identification name
+  name: "acme-connector"
+
+  from:
+    # Specify the interface names you support as "from_module" inputs
+    # Check out the documentation for more details
+    - "process"
+    - "env_vars"
+
+  # Specify the interfaces that expect your output in their configuration
+  # Check out the documentation for more details
+  to:
+    - "process"
+    - "env_vars"
+
+  # Optional config as seen in the user interface
+  # Values are introduced to the terraform file under "config" variable
+  # Check out the documentation for more details
+  properties:
+    - name: "someArg1"
+      type: "string"
+      defaultValue: "Great Scrott!"
+      displayName: "User Interface Presentable"
