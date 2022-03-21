@@ -3,15 +3,15 @@ class Fairy < Formula
   homepage "https://github.com/cloud-fairy/fairy-cli"
   sha256 :no_check
   license "MIT"
-  version: "v0.0.1"
+  version: "v0.0.2"
   
 
   on_macos do
-    url "https://github.com/cloud-fairy/fairy-cli/releases/download/v0.0.1/fairy-darwin-amd64"
+    url "https://github.com/cloud-fairy/fairy-cli/releases/download/v0.0.2/fairy-darwin-amd64"
   end
 
   on_linux do
-    url "https://github.com/cloud-fairy/fairy-cli/releases/download/v0.0.1/fairy-linux-amd64"
+    url "https://github.com/cloud-fairy/fairy-cli/releases/download/v0.0.2/fairy-linux-amd64"
   end
 
   def install
