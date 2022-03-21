@@ -26,7 +26,7 @@ class Fairy < Formula
   desc "cloudfairy cli"
   homepage "https://github.com/cloud-fairy/fairy-cli"
   sha256 :no_check
-  url "https://github.com/cloud-fairy/fairy-cli/archive/refs/tags/v0.0.2.tar.gz"
+  url "https://github.com/cloud-fairy/fairy-cli/archive/refs/tags/{{.Version}}.tar.gz"
   sha256 :no_check
   license "MIT"
   version: "{{.Version}}"
