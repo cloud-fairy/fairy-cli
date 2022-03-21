@@ -7,7 +7,7 @@
 *.dylib
 
 fairy
-bin/fairy
+bin
 
 # Test binary, built with `go test -c`
 *.test
