@@ -6,6 +6,7 @@ run:
 
 compile:
 	rm -rf bin
+	rm -rf releases
 	GOOS=freebsd GOARCH=386 go build -o bin/fairy-freebsd-386 main.go
 	GOOS=freebsd GOARCH=amd64 go build -o bin/fairy-freebsd-amd64 main.go
 	GOOS=linux GOARCH=386 go build -o bin/fairy-linux-386 main.go
