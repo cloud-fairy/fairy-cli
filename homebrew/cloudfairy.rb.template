@@ -30,6 +30,7 @@ class Fairy < Formula
   sha256 :no_check
   license "MIT"
   version: "{{.Version}}"
+  name: "fairy"
 
   depends_on "go" => :build
 
