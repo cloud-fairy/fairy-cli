@@ -1,8 +1,6 @@
 name: Create A Release
 on:
   push:
-    branches:
-      - master
     tags:
       - "v*"
 
@@ -29,7 +27,7 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
-          draft: true
+          draft: false
           prerelease: false
 
       - uses: shogo82148/actions-upload-release-asset@v1
