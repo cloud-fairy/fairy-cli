@@ -3,15 +3,15 @@
 #   homepage "https://github.com/cloud-fairy/fairy-cli"
 #   sha256 :no_check
 #   license "MIT"
-#   version: ""
+#   version: "v0.0.4"
   
 
 #   on_macos do
-#     url "https://github.com/cloud-fairy/fairy-cli/releases/download//fairy-darwin-amd64"
+#     url "https://github.com/cloud-fairy/fairy-cli/releases/download/v0.0.4/fairy-darwin-amd64"
 #   end
 
 #   on_linux do
-#     url "https://github.com/cloud-fairy/fairy-cli/releases/download//fairy-linux-amd64"
+#     url "https://github.com/cloud-fairy/fairy-cli/releases/download/v0.0.4/fairy-linux-amd64"
 #   end
 
 #   def install
@@ -26,10 +26,10 @@ class Fairy < Formula
   desc "cloudfairy cli"
   homepage "https://github.com/cloud-fairy/fairy-cli"
   sha256 :no_check
-  url "https://github.com/cloud-fairy/fairy-cli/archive/refs/tags/.tar.gz"
+  url "https://github.com/cloud-fairy/fairy-cli/archive/refs/tags/v0.0.4.tar.gz"
   sha256 :no_check
   license "MIT"
-  version: ""
+  version: "v0.0.4"
 
   depends_on "go" => :build
 
