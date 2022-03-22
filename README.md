@@ -29,3 +29,9 @@ Additional outputs are optional, but cloud-fairy terragrunt files collect only *
 Your dependencies will be populated according to the **cloudfairy.yaml** descriptor file.
 
 # Documentation WIP
+
+# Example cloudfairy modules
+See [here](https://github.com/cloud-fairy/component-library)
+
+# Adding components to cloudfairy's ecosystem
+Via pull-requests to the [component-library](https://github.com/cloud-fairy/component-library) repository.
