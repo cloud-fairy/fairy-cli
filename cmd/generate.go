@@ -1,7 +1,3 @@
-/*
-Copyright © 2022 NAME HERE <EMAIL ADDRESS>
-
-*/
 package cmd
 
 import (
@@ -10,6 +6,8 @@ import (
 	"github.com/spf13/cobra"
 
 	"cloudfairy/templates"
+
+	"cloudfairy/interactive"
 )
 
 // generateCmd represents the generate command
@@ -20,10 +18,23 @@ var generateCmd = &cobra.Command{
 fairy generate connector acme/conn-container-database
 	`,
 	Aliases: []string{"g", "gen"},
-	Args:    cobra.ExactArgs(2),
+	Args:    cobra.RangeArgs(2, 3),
 	Run: func(cmd *cobra.Command, args []string) {
+		var userAddsProperty bool = true
+
 		cType := args[0]
 		cOut := args[1]
+		isInteractive, _ := cmd.Flags().GetBool("i")
+
+		if isInteractive == true {
+			for userAddsProperty == true {
+				newProp, err := interactive.AskProperty()
+				if err != nil {
+					userAddsProperty = false
+				}
+				fmt.Println(newProp)
+			}
+		}
 		switch cType {
 		case "component", "c", "comp":
 			fmt.Println("Generating component in", cOut)
@@ -42,6 +53,7 @@ fairy generate connector acme/conn-container-database
 
 func init() {
 	rootCmd.AddCommand(generateCmd)
+	generateCmd.PersistentFlags().Bool("i", false, "interactive mode")
 
 	// Here you will define your flags and configuration settings.
 

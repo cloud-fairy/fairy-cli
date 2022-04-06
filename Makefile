@@ -23,5 +23,11 @@ compile:
 update-homebrew:
 	sed 's/{{.Version}}/${VERSION}/g' ./homebrew/cloudfairy.rb.template > ./homebrew/cloudfairy.rb
 
+run-c-build:
+	go run main.go build ../backend/assembler/
+
 run:
 	go run main.go generate component /tmp/test-component
+
+run-interactive:
+	go run main.go generate component /tmp/test-component --i
